@@ -3,11 +3,8 @@
 import os
 import torch
 import torchaudio
-import torchaudio.functional as F
 import wandb
 import auraloss
-from datetime import datetime
-from pathlib import Path
 import time
 
 
@@ -101,7 +98,7 @@ def evaluate_model(args):
         ):
             # start_time = datetime.now()
             start_time = time.perf_counter()
-            global_step = step + 1
+            # global_step = step + 1
 
             input = dry.to(args.device)
             target = wet.to(args.device)

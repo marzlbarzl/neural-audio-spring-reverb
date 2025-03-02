@@ -1,9 +1,7 @@
 import torch
 import torchaudio
 import os
-from random import sample
 from pathlib import Path
-from datetime import datetime
 import time
 
 from .networks.model_utils import load_model_checkpoint
@@ -79,7 +77,7 @@ def make_inference(args) -> torch.Tensor:
 
     if isinstance(args.input, str):
         file_name = Path(args.input).stem
-        sr_tag = str(int(config["sample_rate"] / 1000)) + "k"
+        # sr_tag = str(int(config["sample_rate"] / 1000)) + "k"
 
         os.makedirs(f"{args.audio_dir}/processed", exist_ok=True)
         save_out = f"{args.audio_dir}/processed/{file_name}*{config['name']}.wav"

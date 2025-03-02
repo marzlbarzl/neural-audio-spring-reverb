@@ -33,4 +33,3 @@ num_channels: 32
 dilation_depth: 10
 input_size: 1
 output_size: 1
-

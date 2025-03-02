@@ -28,4 +28,3 @@ n_stacks: 2
 n_channels: 16
 dilation_growth: 10
 kernel_size: 3
-

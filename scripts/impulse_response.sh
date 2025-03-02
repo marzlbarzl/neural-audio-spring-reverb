@@ -10,7 +10,7 @@ checkpoints_dir="models"
 for checkpoint in "$checkpoints_dir"/*.pt; do
     # Call your test script with the checkpoint file as an argument
     printf "Measuring IRs: %s\n" "$checkpoint"
-    
+
     # for impulse response measurement uncomment the line below
     nafx-springrev ir --checkpoint "$checkpoint" --device cpu
 done

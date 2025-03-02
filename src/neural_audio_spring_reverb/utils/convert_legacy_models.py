@@ -1,18 +1,16 @@
-from pyexpat import model
 import sys
 import os
+import torch
+
+from datetime import datetime
+from pathlib import Path
+from neural_audio_spring_reverb.networks.model_utils import initialize_model
 
 project_path = "/gpfs/home/fpapaleo/neural-audio-spring-reverb"
 os.environ["PYTHONPATH"] = f"{project_path}:{os.environ.get('PYTHONPATH', '')}"
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.append(parent_dir)
-
-from datetime import datetime
-import torch
-from pathlib import Path
-from argparse import ArgumentParser
-from neural_audio_spring_reverb.networks.model_utils import initialize_model
 
 
 def load_legacy_checkpoint(args):

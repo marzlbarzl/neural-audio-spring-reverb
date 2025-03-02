@@ -89,8 +89,8 @@ class GCNModelWrapper(WaveformToWaveformBase):
         }  # <- EDIT THIS
 
     def get_citation(self) -> str:
-        return """Comunità, M., Steinmetz, C. J., Phan, H., & Reiss, J. D. (2023). 
-        Modelling Black-Box Audio Effects with Time-Varying Feature Modulation. 
+        return """Comunità, M., Steinmetz, C. J., Phan, H., & Reiss, J. D. (2023).
+        Modelling Black-Box Audio Effects with Time-Varying Feature Modulation.
         https://doi.org/10.1109/icassp49357.2023.10097173"""  # <- EDIT THIS
 
     def get_neutone_parameters(self) -> List[NeutoneParameter]:

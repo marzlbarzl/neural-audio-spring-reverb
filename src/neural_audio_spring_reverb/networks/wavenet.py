@@ -1,11 +1,13 @@
-import os
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from torch import Tensor
-from typing import Dict, List, Optional, Tuple, Union
-from neural_audio_spring_reverb.networks.custom_layers import Conv1dCausal, GatedAF, TanhAF, FiLM
+from neural_audio_spring_reverb.networks.custom_layers import (
+    Conv1dCausal,
+    GatedAF,
+    TanhAF,
+    FiLM,
+)
 
 
 class Conv1dStack(nn.Module):
@@ -230,7 +232,7 @@ if __name__ == "__main__":
     # Print model summary
     summary(model, input_data=[x, cond], depth=6)
     rf = model.calc_receptive_field()
-    print(f"Receptive field: {rf} samples or {(rf / sample_rate)*1e3:0.1f} ms")
+    print(f"Receptive field: {rf} samples or {(rf / sample_rate) * 1e3:0.1f} ms")
 
     scripted_model = torch.jit.script(model)
     scripted_model.save("scripted_model.pt")

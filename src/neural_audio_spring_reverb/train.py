@@ -1,6 +1,4 @@
-import os
 import torch
-import torchaudio
 import torchaudio.functional as F
 import auraloss
 import numpy as np
@@ -56,10 +54,13 @@ def train_model(args):
 
         print(f"Using configuration {config['name']}")
 
-
         # Update Configuration with CLI arguments
         if args.dataset is not None:
             config["dataset"] = args.dataset
+        else:
+            raise ValueError(
+                "Dataset must be specified either in the config file or as a CLI argument."
+            )
         if args.sample_rate is not None:
             config["sample_rate"] = args.sample_rate
         if args.bit_depth is not None:
@@ -79,15 +80,13 @@ def train_model(args):
         raise ValueError(
             "Either a checkpoint or a configuration file must be specified."
         )
-    
-
 
     # Get the timestamp and label for the run
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     sr_tag = str(int(config["sample_rate"] / 1000)) + "kHz"
     # label = f"{sr_tag}-{config['name']}-{config['criterion1']}+{config['criterion2']}"
     label = f"{config['name']}-{args.dataset}-{timestamp}-{sr_tag}"
-    
+
     # Define loss function
     mae = torch.nn.L1Loss().to(args.device)
     dc = auraloss.time.DCLoss().to(args.device)
@@ -171,7 +170,6 @@ def train_model(args):
     )
 
     try:
-
         for epoch in range(current_epoch, max_epochs):
             train_loss = 0.0
 

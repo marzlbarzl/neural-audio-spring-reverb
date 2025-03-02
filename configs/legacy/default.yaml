@@ -36,7 +36,7 @@ model_type: TCN
 num_channels: 32
 dilation_depth: 10
 num_blocks: 5
-kernel_size: 9 
+kernel_size: 9
 
 # model_type: GCN
 # num_channels: 16
@@ -53,5 +53,3 @@ kernel_size: 9
 # use_skip: True
 # dropout: 0.5
 # kernel_size: 3
-
-

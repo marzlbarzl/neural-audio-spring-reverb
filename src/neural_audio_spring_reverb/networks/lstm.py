@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 
 from neural_audio_spring_reverb.networks.custom_layers import Conv1dCausal, FiLM

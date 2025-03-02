@@ -57,10 +57,10 @@ Where DATASET_NAME can be: 'springset', 'egfxset' or 'customset'. The datasets a
 
 **To train a model:**
 
-You can start training from scratch from a ``YAML`` configuration file (some are provided in [``configs``](configs/) ) 
+You can start training from scratch from a ``YAML`` configuration file (some are provided in [``configs``](configs/) )
 
 ```terminal
-nafx-springrev train --init YAML_CONF_PATH
+nafx-springrev train --init YAML_CONF_PATH --dataset DATASET_NAME
 ```
 
 Alternatively, you can load a pretrained model and resume the training from a checkpoint (``.pt``). If you resume the training from a checkpoint, this will proceed until the current epoch is equal to MAX_EPOCHS.
@@ -130,8 +130,8 @@ nafx-springrev infer -i INPUT_FILE_PATH -c PT_CHECKPOINT_PATH
 -h, --help                      show the help message and exit
 
 POSITIONAL ARGUMENTS:
-action     
-'download', 'train', 'eval', 'infer', 'config_tools', 'measure_ir', 'measure_rt60', 'report' 
+action
+'download', 'train', 'eval', 'infer', 'config_tools', 'measure_ir', 'measure_rt60', 'report'
 
 OPTIONAL ARGUMENTS:
 --data_dir      DATA_DIR      datasets download destination folder
@@ -168,7 +168,7 @@ python main.py wrap -c PT_CHECKPOINT_PATH
 
 ## Audio Measurement Tools
 
-The folder [``tools``](src/tools/) contains some scripts to measure the impulse response of a spring reverb model or an audio file that contains the impulse response of a physical device. 
+The folder [``tools``](src/tools/) contains some scripts to measure the impulse response of a spring reverb model or an audio file that contains the impulse response of a physical device.
 
 
 ### Measure impulse response
@@ -177,7 +177,7 @@ This action will call a function that loads the model checkpoint, generate the t
 ```terminal
 python main.py ir --duration DURATION -c PT_CHECKPOINT_PATH
 ```
-A logaritimic sweep tone is generated and is processed by the model inference, the output is then convolved with the inverse filter previously generated. 
+A logaritimic sweep tone is generated and is processed by the model inference, the output is then convolved with the inverse filter previously generated.
 
 - The plot is saved in the [``plots/measured_IR``](docs/plots/measured_IR/) folder.
 - The audio file corresponding to the measured IR is saved in the [``audio/measured_IR``](audio/measured_IR/) folder.

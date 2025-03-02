@@ -2,7 +2,12 @@ import torch
 import torch.nn as nn
 
 from torch import Tensor
-from neural_audio_spring_reverb.networks.custom_layers import Conv1dCausal, FiLM, GatedAF, TanhAF
+from neural_audio_spring_reverb.networks.custom_layers import (
+    Conv1dCausal,
+    FiLM,
+    GatedAF,
+    TanhAF,
+)
 
 
 class GCNBlock(nn.Module):
@@ -181,7 +186,7 @@ if __name__ == "__main__":
 
     summary(model, input_data=(x, cond), depth=4, verbose=1)
     rf = model.calc_receptive_field()
-    print(f"Receptive field: {rf} samples or {(rf / sample_rate)*1e3:0.1f} ms")
+    print(f"Receptive field: {rf} samples or {(rf / sample_rate) * 1e3:0.1f} ms")
 
     scripted_model = torch.jit.script(model)
     scripted_model.save("scripted_model.pt")

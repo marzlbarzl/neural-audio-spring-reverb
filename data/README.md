@@ -14,7 +14,7 @@ File: wet_val_test.h5, Total Length: 128.00 seconds, 2048000 samples
     author       = {Martinez Ramirez, Marco A and
                     Benetos, Emmanouil and
                     Reiss, Joshua D},
-    title        = {{Modeling plate and spring reverberation using a 
+    title        = {{Modeling plate and spring reverberation using a
                     DSP-informed deep neural network}},
     month        = oct,
     year         = 2019,
@@ -26,7 +26,7 @@ File: wet_val_test.h5, Total Length: 128.00 seconds, 2048000 samples
 
 ## EGFxSet 48kHz 24bit
 
-Spring Reverb single notes are recorded using a digital reverb emulations of an **Orange Crush Pro 60 12-inch speaker combo amplifier**. 
+Spring Reverb single notes are recorded using a digital reverb emulations of an **Orange Crush Pro 60 12-inch speaker combo amplifier**.
 The amplifier used is a 2014 model made in China and it integrates Plate, Hall and Spring reverberations.
 
 ```bibtex
@@ -34,7 +34,7 @@ The amplifier used is a 2014 model made in China and it integrates Plate, Hall a
   author       = {Hegel Pedroza and
                   Gerardo Meza and
                   Iran R. Roman},
-  title        = {{EGFxSet: Electric guitar tones processed through 
+  title        = {{EGFxSet: Electric guitar tones processed through
                    real effects of distortion, modulation, delay and
                    reverb}},
   month        = sep,

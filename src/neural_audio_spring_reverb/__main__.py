@@ -23,7 +23,7 @@ def main():
             "ir",
             "rt60",
             "wrap",
-            "rtf"
+            "rtf",
         ],
         help="The action to perform, check the doc.",
     )

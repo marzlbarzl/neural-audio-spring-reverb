@@ -13,7 +13,7 @@ pip install essentia soundfile pyloudnorm
 1. [](02_EgfxSetAnalysis.ipynb)
 
 1. [](03_AudioFeaturesEssentiaStreaming.ipynb)
-    Extract the audio features from the two dataset, save in multiple csv files available [here](../data/features/).    
+    Extract the audio features from the two dataset, save in multiple csv files available [here](../data/features/).
 
 - [](03_FeatureVisualization.ipynb)
     Visualize the extracted features on both datasets.

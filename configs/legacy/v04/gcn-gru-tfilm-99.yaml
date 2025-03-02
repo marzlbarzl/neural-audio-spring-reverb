@@ -36,4 +36,3 @@ dilation_growth: 4
 kernel_size: 99
 tfilm_block_size: 128
 rnn_type: gru
-

@@ -34,4 +34,3 @@ n_blocks: 4
 n_channels: 32
 dilation_growth: 16
 kernel_size: 99
-

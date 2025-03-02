@@ -1,4 +1,4 @@
-""" 
+"""
 Temporal Convolutional Network (TCN) with FiLM conditioning module.
 
 https://github.com/csteinmetz1/steerable-nafx/blob/main/steerable-nafx.ipynb
@@ -8,13 +8,11 @@ https://github.com/csteinmetz1/steerable-nafx/blob/main/steerable-nafx.ipynb
     author={Steinmetz, Christian J. and Reiss, Joshua D.},
     booktitle={5th Workshop on Creativity and Design at NeurIPS},
     year={2021}}
-    """
+"""
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
-from typing import Dict, List, Optional, Tuple, Union
 from torch import Tensor
 from neural_audio_spring_reverb.networks.custom_layers import Conv1dCausal, FiLM
 

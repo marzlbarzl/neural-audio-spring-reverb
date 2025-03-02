@@ -9,7 +9,7 @@ Reverberation is a key element in spatial audio perception, histor- ically achie
 
 ## Audio Examples collected during the evaluation
 
-| Model | Target | Prediction | 
+| Model | Target | Prediction |
 |-------|--------|------------|
 | GCN | <audio src="assets/audio/eval/target-GCN-3-stft-48k.wav" controls preload style="width: 100px;"></audio> | <audio src="assets/audio/eval/pred-GCN-3-stft-48k.wav" controls preload style="width: 100px;"></audio> |
 | TCN |<audio src="assets/audio/eval/target-TCN-99-stft-48k.wav" controls preload style="width: 100px;"></audio> | <audio src="assets/audio/eval/pred-TCN-99-stft-48k.wav" controls preload style="width: 100px;"></audio> |

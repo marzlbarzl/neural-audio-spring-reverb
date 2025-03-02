@@ -28,7 +28,7 @@ permalink: /resources/
 
 <h2>Articles and blog posts</h2>
 
-For a rigourous bibliography please refer to the [thesis](https://zenodo.org/records/8380480). 
+For a rigourous bibliography please refer to the [thesis](https://zenodo.org/records/8380480).
 
 1. [A History of Audio Effects](https://www.mdpi.com/2076-3417/10/3/791)
 

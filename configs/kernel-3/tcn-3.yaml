@@ -26,4 +26,3 @@ n_channels: 32
 n_layers: 4
 dilation_growth: 14
 kernel_size: 3
-

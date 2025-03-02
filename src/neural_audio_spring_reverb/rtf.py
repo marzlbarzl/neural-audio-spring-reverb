@@ -2,6 +2,7 @@ import torch
 import os
 from neural_audio_spring_reverb.inference import make_inference
 
+
 def setup_dummy_args(args):
     """
     Setup dummy arguments required for the make_inference function.
@@ -20,6 +21,7 @@ def setup_dummy_args(args):
     # args.your_config_param = 'your_value'
 
     return args
+
 
 def measure_rtf(args):
     args = setup_dummy_args(args)

@@ -27,4 +27,3 @@ output_size: 1
 dropout_prob: 0.5
 use_skip: True
 kernel_size: 3
-

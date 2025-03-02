@@ -1,4 +1,3 @@
-from logging import config
 import numpy as np
 import torch
 import torchaudio
@@ -26,9 +25,7 @@ def plot_waterfall(waveform, title, sample_rate, args, stride=1):
 
     # Sxx_dBFS = 10 * np.log10(np.fmax(Sxx, 1e-9))
     # Convert magnitude to dB
-    Sxx_dBFS = 10 * np.log10(
-        Sxx / 1.0 + np.finfo(float).eps
-    )
+    Sxx_dBFS = 10 * np.log10(Sxx / 1.0 + np.finfo(float).eps)
 
     fig = plt.figure(figsize=(10, 10))
 

@@ -113,13 +113,13 @@ def initialize_model(device, config):
     if config["model_type"] in ["TCN", "WaveNet", "GCN"]:
         rf = model.calc_receptive_field()
         print(
-            f"Receptive field: {rf} samples or {(rf / config['sample_rate'])*1e3:0.1f} ms"
+            f"Receptive field: {rf} samples or {(rf / config['sample_rate']) * 1e3:0.1f} ms"
         )
     else:
         rf = None
 
     params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"Parameters: {params*1e-3:0.3f} k")
+    print(f"Parameters: {params * 1e-3:0.3f} k")
 
     return model, rf, params
 

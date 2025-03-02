@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Tuple
 
-""" 
+"""
 Signal Generators for Measurements
 ===================================
 This module contains functions to generate the signals used in the measurements:
@@ -110,7 +110,7 @@ def generate_reference(
     )
 
     # Convolves the sweep tone with the inverse filter in order to obtain the impulse response x(t)
-    N = len(sweep)
+    # N = len(sweep)
     impulse_response = np.convolve(inverse_filter, sweep)
 
     return sweep, inverse_filter, impulse_response

@@ -5,7 +5,10 @@ import traceback
 
 from pathlib import Path
 from torchinfo import summary
-from neural_audio_spring_reverb.networks.model_utils import load_model_checkpoint, save_model_checkpoint
+from neural_audio_spring_reverb.networks.model_utils import (
+    load_model_checkpoint,
+    save_model_checkpoint,
+)
 
 
 def modify_checkpoint(args):
@@ -140,7 +143,7 @@ def print_models(args):
                 else:
                     rf = None
                 f.write("\n")
-                f.write(f"Model architecture:\n")
+                f.write("Model architecture:\n")
                 model_report = summary(model, input_size=[(1, 1, 96000), (1, 2)])
                 f.write(str(model_report))
                 f.write("\n")

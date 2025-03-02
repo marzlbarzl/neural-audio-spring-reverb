@@ -4,38 +4,93 @@ build-backend = "hatchling.build"
 
 [project]
 name = "neural_audio_spring_reverb"
-version = "0.5.0"
+version = "0.6.0"
 description = "Neural Audio Effect Modelling Strategies for a Spring Reverb"
-authors = [{name = "Francesco Papaleo"}]
-license = {file = "LICENSE"}
+authors = [{ name = "Francesco Papaleo" }]
+license = { file = "LICENSE" }
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.12"
 
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
     "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
 ]
+
 dependencies = [
-    "auraloss",
-    "h5py",
-    "matplotlib",
-    "numpy",
-    "PyYAML",
-    "scipy",
-    "setuptools",
-    "torch",
-    "torchaudio",
-    "torchinfo",
-    "neutone_sdk",
-    "wandb",
-    "librosa",
+    "auraloss==0.4.0",
+    "h5py==3.13.0",
+    "matplotlib==3.10.1",
+    "numpy==1.26.4",
+    "PyYAML==6.0.2",
+    "scipy==1.15.2",
+    "setuptools>=68.0.0",
+    "torch==2.1.2",
+    "torchaudio==2.1.2",
+    "torchinfo==1.8.0",
+    "neutone_sdk==1.4.2",
+    "wandb==0.19.7",
+    "librosa==0.10.2.post1",
+    "scikit-learn==1.6.1",
+    "joblib==1.4.2",
+    "numba==0.61.0",
+    "pooch==1.8.2",
+    "soxr==0.5.0.post1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",  # Linter
+    "black",  # Code formatter
+    "pre-commit",  # Auto-formatting in Git commits
+    "tox",
+]
+
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "myst-parser",
+    "numpydoc"
 ]
 
 [project.urls]
-homepage = "https://github.com/francescopapaleo/neural-audio-spring-reverb"
+homepage = "https://francescopapaleo.github.io/neural-audio-spring-reverb"
 repository = "https://github.com/francescopapaleo/neural-audio-spring-reverb"
-documentation = "https://github.com/francescopapaleo/neural-audio-spring-reverb/docs"
+documentation = "https://francescopapaleo.github.io/neural-audio-spring-reverb/docs"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["wandb/*", "neutone_sdk/*"]
+
+[tool.ruff.lint]
+ignore = ["F841", "E722"]
+
+[tool.black]
+line-length = 88
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py310, py311
+
+[testenv]
+deps = pytest
+commands = pytest
+"""
 
 [project.scripts]
 nafx-springrev = "neural_audio_spring_reverb.__main__:main"

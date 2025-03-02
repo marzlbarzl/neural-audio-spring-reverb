@@ -1,0 +1,46 @@
+{
+  "os":  "macOS-14.7.2-arm64-arm-64bit",
+  "python":  "CPython 3.11.11",
+  "startedAt":  "2025-03-02T19:46:39.927928Z",
+  "args":  [
+    "eval",
+    "-c",
+    "models/GCN-3-egfxset-20240324-160003-48kHz.pt"
+  ],
+  "program":  "/Users/fra/.pyenv/versions/3.11.11/bin/nafx-springrev",
+  "git":  {
+    "remote":  "https://github.com/francescopapaleo/neural-audio-spring-reverb.git",
+    "commit":  "349416482b6c29f3782b78a2797334efe4d5e6bc"
+  },
+  "email":  "francesco.papaleo@gmail.com",
+  "root":  "/Volumes/Transcend/Development/Personal/neural-audio-spring-reverb",
+  "host":  "holofrancesco",
+  "executable":  "/Users/fra/.pyenv/versions/3.11.11/bin/python3.11",
+  "cpu_count":  11,
+  "cpu_count_logical":  11,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "353700241408"
+    },
+    "/System/Volumes/Data":  {
+      "total":  "494384795648",
+      "used":  "353700241408"
+    }
+  },
+  "memory":  {
+    "total":  "19327352832"
+  },
+  "cpu":  {
+    "count":  11,
+    "countLogical":  11
+  },
+  "apple":  {
+    "name":  "Apple M3 Pro",
+    "ecpuCores":  6,
+    "pcpuCores":  5,
+    "gpuCores":  14,
+    "memoryGb":  18,
+    "ramTotalBytes":  "19327352832"
+  }
+}
