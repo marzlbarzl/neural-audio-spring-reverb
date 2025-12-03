@@ -14,7 +14,7 @@
     "tags": [
         "reverb"
     ],
-    "citation": "Comunit\u00e0, M., Steinmetz, C. J., Phan, H., & Reiss, J. D. (2023). \n    Modelling Black-Box Audio Effects with Time-Varying Feature Modulation. \n    https://doi.org/10.1109/icassp49357.2023.10097173",
+    "citation": "Comunit\u00e0, M., Steinmetz, C. J., Phan, H., & Reiss, J. D. (2023).\n    Modelling Black-Box Audio Effects with Time-Varying Feature Modulation.\n    https://doi.org/10.1109/icassp49357.2023.10097173",
     "is_experimental": true,
     "neutone_parameters": {
         "p1": {
@@ -62,5 +62,5 @@
     "look_behind_samples": 0,
     "sdk_version": "1.4.2",
     "pytorch_version": "2.1.2",
-    "date_created": 1711312492.150686
+    "date_created": 1764204855.961677
 }

@@ -33,7 +33,7 @@ def main():
         "--device",
         type=str,
         default="auto",
-        choices=["auto", "cuda:0", "cpu"],
+        choices=["auto", "cuda:0", "cpu", "mps"],
         help="Set device to run the model on (default: auto)",
     )
 

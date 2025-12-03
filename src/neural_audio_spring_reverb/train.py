@@ -17,6 +17,9 @@ from .networks.model_utils import (
     parse_config,
 )
 
+import torch.multiprocessing as mp
+mp.set_sharing_strategy("file_system")
+
 
 def train_model(args):
     torch.cuda.empty_cache()
